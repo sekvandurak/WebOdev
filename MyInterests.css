@@ -1,69 +1,63 @@
 /* Basic Slider Styling */
 #movie-slider {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  
-  #movie-container {
-    display: flex;
-  }
-  
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#movie-container {
+  display: flex;
+}
+
+.movie-card {
+  flex: 0 0 300px; /* Initial width for larger screens */
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.2s ease-in-out; /* Add a smooth transition for hover effect */
+}
+
+.movie-card:hover {
+  transform: translateY(-5px); /* Elevate slightly on hover */
+}
+
+.movie-card img {
+  max-width: 100%;
+  height: 600px;
+  margin-bottom: 10px;
+}
+
+.movie-card .overview,
+.movie-card .overview-truncated,
+.movie-card .overview-full {
+  white-space: normal; /* Ensure text wraps */
+  word-wrap: break-word; /* Break long words if necessary */
+  margin-top: 10px;
+}
+
+.read-more,
+.read-less {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) { /* For smaller desktops/laptops */
   .movie-card {
-    flex: 0 0 300px; /* Initial width for larger screens */
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-right: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    flex: 0 0 280px;
   }
-  
-  .movie-card:hover {
-    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) { /* For tablets */
+  .movie-card {
+    flex: 0 0 250px;
   }
-  
-  .movie-card img {
-    max-width: 100%;
-    height: 600px;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) { /* For mobile phones */
+  .movie-card {
+    flex: 0 0 95%;
+    margin: 10px auto;
   }
-  
-  .movie-card .overview {
-    overflow: hidden; /* Hide overflowing text */
-    display: block; /* Added to help in some browsers */ /* NEW */
-  }
-  
-  .movie-card .overview p {
-    margin-bottom: 0; 
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  
-    /* For Firefox */
-    display: block;         /* Fallback for non-webkit */
-    max-height: 4.5em;      /* Approx. 3 lines */
-    line-height: 1.5em;     /* Adjust to your font size */
-    overflow: hidden;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 1024px) {
-    .movie-card {
-      flex: 0 0 280px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .movie-card {
-      flex: 0 0 250px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .movie-card {
-      flex: 0 0 95%;
-      margin: 10px auto;
-    }
-  }
-  
+}
