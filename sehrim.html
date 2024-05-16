@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+        </style>
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+        <!-- This div will be replaced by navbar.html -->
+
+    <br>
+    <br>
+
+    <div class="container">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="8"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="9"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="10"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="11"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="12"></li>
+            </ol>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active"  >
+                   
+                    <a href="https://kizkulesi.gov.tr/"> <img src="resimler/kız.jpg" widht="450" height="600" class="d-block w-100" alt="..."> </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Kız Kulesi</h5>
+                        <p>Kız Kulesi, İstanbul Boğazı'nın Marmara Denizi'ne yakın kısmında, Salacak açıklarında yer
+                            alan küçük adacık üzerinde inşa edilmiş yapıdır.</p>
+                       
+                    </div>
+                </div>
+                <div class="carousel-item">
+                   <a href="https://galatakulesi.gov.tr/"> <img src="resimler/3.jpg" widht="450" height="600" class="d-block w-100" alt="..."> </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Galata Kulesi</h5>
+                        <p>Galata Kulesi ya da müze olarak kullanılmaya başlaması sonrasındaki adıyla Galata Kulesi
+                            Müzesi, İstanbul'un Beyoğlu ilçesinde bulunan bir kuledir. Adını, bulunduğu Galata semtinden
+                            alır.</p>
+                       
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.uskudar.bel.tr/tr/main/pages/15-temmuz-sehitler-koprusu/36">   <img src="resimler/4.jpg" widht="450" height="600" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            15 Temmuz Şehitler Köprüsü</h5>
+                        <p>15 Temmuz Şehitler Köprüsü, eski adıyla Boğaziçi Köprüsü ya da boğaza inşa edilen ilk köprü
+                            olmasına atıfla halk arasında Birinci Köprü; Karadeniz ile Marmara Denizini birbirine
+                            bağlayan İstanbul Boğazı üzerinde yer alan üç asma köprüden biri ve ilkidir.</p>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item ">
+                    <a href="https://www.sanatinyolculugu.com/ortakoy-camii/"> <img src="resimler/1.jpg" widht="450" height="600" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Ortaköy Camii</h5>
+                        <p>Büyük Mecidiye Camii ya da halk arasında bilinen adı ile Ortaköy Camii, İstanbul Boğaziçi’nde
+                            Beşiktaş ilçesinin, Ortaköy semtinde sahilde bulunan Neo Barok tarzında bir camiidir.</p>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item ">
+                    <a href="https://istanbuluseyret.ibb.gov.tr/eminonu-3/"> <img src="resimler/eminonu.jpg" widht="450" height="600" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Eminönü</h5>
+                        <p>Eminönü, şehrin en meşhur semtlerinden biri. Her daim bir koşuşturmaca, her
+                            daim bir turist kalabalığı görebileceğin Eminönü, Rüstem Paşa Camii ve Süleymaniye Camisi
+                            tarafından çevreleniyor.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-item ">
+                    <a href="https://www.yerebatan.com/"><img src="resimler/sarnic.jpg" widht="450" height="600" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Yerebatan Sarnıcı</h5>
+                        <p>Bizans İmparatorluğu döneminden İstanbul’da kalan en değerli yapılardan
+                            Yerebatan Sarnıcı. 532 yılında İmparator Justinianus’un emri üzerine inşa edilen sarnıç,
+                            o yıllarda sarayın ve halkın su ihtiyacı için kullanılırmış. Hatta İstanbul’un fethinden
+                            sonra da bir süre boyunca su kaynağı olarak kullanımı devam etmiş.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-item ">
+                    <a href=" https://www.millisaraylar.gov.tr/saraylar/dolmabahce-sarayi"> <img src="resimler/dolmabahce.jpg" widht="450" height="600" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dolmabahçe Sarayı</h5>
+                        <p>Mustafa Kemal Atatürk’ün hayata gözlerini yumduğu bu sarayın
+                            hepimizin kalbindeki yeri büyük. Bu nedenle de Dolmabahçe Sarayı, İstanbul’da
+                            gezilecek yerler listesinin belki de en duygusal maddelerinden biri.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-item ">
+                    <a href="https://istanbuluseyret.ibb.gov.tr/taksim/">  <img src="resimler/taksim.jpg" widht="450" height="600" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Taksim Meydanı </h5>
+                        <p>Şehrin en hareketli noktalarından biri olan Taksim Meydanı daire şeklinde ve hemen
+                            ortasında Cumhuriyet Anıtı bulunuyor. 1928 yılında yapılan bu anıtın bir tarafı
+                            Kurtuluş Savaşı, diğer tarafı ise Cumhuriyet’in ilan edilmesinden sonra
+                            Türkiye’yi anlatıyor.</p>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item ">
+                    <a href="http://www.istanbul.gov.tr/istanbulun-koru-ve-parklari-gulhane-parki">  <img src="resimler/park.jpg" widht="450" height="600" class="d-block w-100" alt="..."> </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Gülhane Parkı </h5>
+                        <p>Gülhane Parkı, İstanbul'un Fatih ilçesinin Eminönü semtinde yer alan tarihî bir parktır. Alay
+                            Köşkü, Topkapı Sarayı ve Sarayburnu arasında yer alır.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item ">
+                    <a href="https://www.pierrelotitepesi.com/">   <img src="resimler/loti.jpg" widht="450" height="600" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Pierre Loti Tepesi </h5>
+                        <p>Haliç'in o ünlü panaromasının seyredilebildiği en iyi bölge olan bu sırtlara çıkıldığında;
+                            ünlü Fransız yazar Pierre Loti'nin adını taşıyan Kahve'ye ulaşılmaktadır. İstanbul'da uzun
+                            dönemler yaşayan ve gerçek bir İstanbul aşığı olan Pierre Loti'nin asıl adı "Julien
+                            Viaud'dur". Tarihi Kahve, bahsi geçen eşsiz manzaranın seyredilebildiği en ideal yerdir.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item ">
+                    <a href="https://www.miniaturk.com.tr/">  <img src="resimler/miniaturk.jpg" widht="450" height="600" class="d-block w-100" alt="..."> </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Miniatürk</h5>
+                        <p>Türkiye’nin ilk minyatür parkı olan Miniatürk, İstanbul’un en turistik destinasyonlarından
+                            biri. İstanbul’da bulunan 57, Anadolu’nun çeşitli yerlerinden 12 ve Türkiye sınırlarına
+                            günümüzde dahil olmasa da Osmanlı coğrafyasından 12 yapının 1/25 ölçekli maketlerinin
+                            bulunduğu Miniatürk, 60.000 metrekarelik bir alanı kaplıyor.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item ">
+                    <a href=" https://www.buyukada.org/buyukada-rehberi-turkce/"> <img src="resimler/buyukada.jpg" widht="450" height="600" class="d-block w-100" alt="..."> </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            Büyükada </h5>
+                        <p>İstanbul’da gezilecek yerler denince akla elbette Prens Adaları da geliyor. Prens Adaları,
+                            İstanbul’a çok yakın olup İstanbul’dan çoook uzaktaymış gibi hissedebileceğin en güzel
+                            yerlerden. Büyükada ise Prens Adaları’nın en büyüğü.</p>
+                    </div>
+                </div>
+
+
+
+
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions"
+                    data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <center>
+            <h1>İSTANBULDA GÖRÜLMESİ GEREKEN YERLER</h1>
+        </center>
+
+        <br>
+        <br>
+
+        <h5>
+            <h2>İSTANBUL</h2>
+            <p>İstanbul, Türkiye'de Marmara Bölgesi'nde yer alan şehir ve
+                Türkiye'nin 81 ilinden biridir. Ülkenin nüfus bakımından en çok göç alan ve en kalabalık ilidir.
+                Ekonomik,
+                tarihî ve sosyo-kültürel açıdan önde gelen şehirlerden biridir.Şehir, iktisadi büyüklük
+                açısından
+                dünyada 34. sırada yer alır. Nüfuslarına göre şehirler listesinde belediye sınırları göz önüne
+                alınarak
+                yapılan sıralamaya göre Avrupa'da birinci, dünyada ise altıncı sırada yer almaktadır.
+            </p>
+            <p>
+
+                İstanbul Türkiye'nin kuzeybatısında, Marmara kıyısı ve Boğaziçi boyunca, Haliç'i de çevreleyecek
+                şekilde
+                kurulmuştur. İstanbul kıtalararası bir şehir olup, Avrupa'daki bölümüne Avrupa Yakası veya
+                Rumeli
+                Yakası,
+                Asya'daki bölümüne ise Anadolu Yakası veya Asya Yakası denir. Tarihte ilk olarak üç tarafı
+                Marmara
+                Denizi,
+                Boğaziçi ve Haliç'in sardığı bir yarımada üzerinde kurulan İstanbul'un batıdaki sınırını
+                İstanbul
+                Surları
+                oluşturmaktaydı. Gelişme ve büyüme sürecinde surların her seferinde daha batıya ilerletilerek
+                inşa
+                edilmesiyle dört defa genişletilen şehrin 39 ilçesi vardır. Sınırları içerisinde ise büyükşehir
+                belediyesi ile birlikte toplam 40 belediye bulunmaktadır.
+
+            </p>
+            <p>
+                Dünyanın en eski şehirlerinden biri olan İstanbul, 330-395 yılları arasında Roma İmparatorluğu,
+                395-1204
+                yılları arasında Bizans İmparatorluğu, 1204-1261 yılları arasında Latin İmparatorluğu,1261-1453
+                yılları
+                arasında tekrar Bizans İmparatorluğu ve son olarak 1453-1922 yılları arasında Osmanlı
+                İmparatorluğu'na
+                başkentlik yaptı.Ayrıca İstanbul, Hilâfetin Osmanlı İmparatorluğu'na geçtiği 1517'den
+                kaldırıldığı
+                1924'e kadar İslam dünyasının da merkezi oldu.
+
+            </p>
+            <p>
+
+                Karadeniz ile Marmara Denizi'ni bağlayan ve Asya ile Avrupa'yı ayıran İstanbul Boğazı'na ev
+                sahipliği
+                yapması nedeniyle, İstanbul'un jeopolitik önemi oldukça yüksektir.Bugün tamamına yakını
+                doldurulmuş
+                olan ya da kaybolan doğal limanları vardır. Bu özellikleri yüzünden bölge toprakları üzerinde
+                uzun
+                süreli
+                egemenlik anlaşmazlıkları ve savaşlar yaşanmıştır. Başlıca akarsular Riva, Kâğıthane ve Alibey
+                dereleridir.İl toprakları az engebelidir ve en yüksek noktası Kartal ilçesindeki Aydos
+                Tepesi'dir.
+                İldeki başlıca doğal göller Büyükçekmece, Küçükçekmece ve Durusu gölleridir. İl ve yakın
+                çevresinde,
+                Karadeniz ile Akdeniz makro iklimleri arasında geçiş özellikleri görülür. Hava sıcaklıkları ve
+                yağış
+                ortalamaları düzensiz; bitki örtüsü dengesizdir.</p>
+        </h5>
+
+
+        <div class="row my-5">
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/kız.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Kız Kulesi, İstanbul Boğazı'nın Marmara Denizi'ne yakın kısmında, Salacak
+                            açıklarında yer alan küçük adacık üzerinde inşa edilmiş yapıdır.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Galata Kulesi Müzesi, İstanbul'un Beyoğlu ilçesinde bulunan bir kuledir.
+                            Adını,
+                            bulunduğu Galata semtinden alır.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">15 Temmuz Şehitler Köprüsü, eski adıyla Boğaziçi Köprüsü; Karadeniz ile
+                            Marmara Denizini birbirine bağlayan İstanbul Boğazı üzerinde
+                            yer
+                            alan üç asma köprüden biri ve ilkidir.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Büyük Mecidiye Camii ya da halk arasında bilinen adı ile Ortaköy Camii,
+                            İstanbul Boğaziçi’nde Beşiktaş ilçesinin, Ortaköy semtinde sahilde bulunan Neo Barok
+                            tarzında
+                            bir camiidir.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!---->
+
+        <div class="row my-5">
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/eminonu.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Eminönü, şehrin en meşhur semtlerinden biri. Her daim bir koşuşturmaca, her
+                            daim bir turist kalabalığı görebileceğin Eminönü, Rüstem Paşa Camii ve Süleymaniye Camisi
+                            tarafından çevreleniyor. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/sarnic.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">İmparator Justinianus’un emri üzerine inşa edilen sarnıç,
+                            sarayın ve halkın su ihtiyacı için kullanılırmış. Hatta İstanbul’un fethinden
+                            sonra da bir süre boyunca su kaynağı olarak kullanımı devam etmiş.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/dolmabahce.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Mustafa Kemal Atatürk’ün hayata gözlerini yumduğu bu sarayın
+                            hepimizin kalbindeki yeri büyük. Bu nedenle de Dolmabahçe Sarayı, İstanbul’da
+                            gezilecek yerler listesinin belki de en duygusal maddelerinden biri.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/taksim.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Şehrin
+                            hareketli noktalarından olan Taksim Meydanı daire şeklinde ve hemen
+                            ortasında Cumhuriyet Anıtı bulunuyor. 1928 yılında yapılan bu anıtın bir tarafı
+                            Kurtuluş Savaşı, diğer tarafı ise Cumhuriyet’in ilan edilmesinden sonra
+                            Türkiye’yi anlatıyor.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!---->
+
+        <div class="row my-5">
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/gulhane.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Osmanlı döneminde Topkapı Sarayının bahçesi olarak kullanılmış ve sarayın
+                            güllerinin yetiştirildiği bahçe olan Gülhane Parkı konumu ve tarihsel izleri ile İstanbul’un
+                            en çok bilinen ve en çok ziyaret edilen parkıdır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/loti.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Haliç'in o ünlü panaromasının seyredilebildiği en iyi bölge olan bu
+                            sırtlara çıkıldığında; ünlü Fransız yazar Pierre Loti'nin adını taşıyan Kahve'ye
+                            ulaşılmaktadır. Tarihi Kahve, bahsi geçen eşsiz manzaranın
+                            seyredilebildiği en ideal yerdir.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/miniaturk.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Türkiye’nin ilk minyatür parkı olan Miniatürk, İstanbul’un en turistik
+                            destinasyonlarından biri. İstanbul’da bulunan 57, Anadolu’nun çeşitli yerlerinden 12 ve
+                            Türkiye sınırlarına günümüzde dahil olmasa da Osmanlı coğrafyasından 12 yapıyı bulunuyor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <img src="resimler/buyukada.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">İstanbul’da gezilecek yerler denince akla elbette Prens Adaları da geliyor.
+                            Prens Adaları, İstanbul’a çok yakın olup İstanbul’dan çoook uzaktaymış gibi hissedebileceğin
+                            en güzel yerlerden. Büyükada ise Prens Adaları’nın en büyüğü.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="container">
+            <h2>İstanbulda Gezilecek Yerler</h2>
+            <h4>YEREBATAN SARNICI <a href="https://www.yerebatan.com/">
+                <img src="resimler/sarnic.jpg" alt="yerebatan sarnıcı" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p> Halk arasında Yerebatan Sarnıcı olarak bilinen, bulunduğu yerde daha önce bir bazilika bulunması
+                sebebiyle
+                Bazilika Sarnıcı olarak da adlandırılan bu yapının tarihi, Bizans dönemine dayanmaktadır. İşletmesi
+                İstanbul
+                Büyükşehir Belediyesi Kültür A.Ş tarafından yapılan bu eşsiz yapı hem müze olarak hizmet vermekte hem de
+                birçok etkinliğe ev sahipliği yapmaktadır.
+
+            </p>
+<p><ul>
+    <li>Daha fazla bilgi için <a href="https://www.yerebatan.com/">https://www.yerebatan.com/</a></li>
+    <li>Yerebatan Sarnıcını 360 derece görmek için <a href="https://360turkey.com/premium/yerebatan/index.htm">Tıklayınız</a></li>
+</ul>
+</p>
+<br>
+            <br>
+            <h4>DOLMABAHÇE SARAYI <a href=" https://www.millisaraylar.gov.tr/saraylar/dolmabahce-sarayi">
+                <img src="resimler/dolmabahce.jpg" alt="dolmabahçe sarayı" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p> Yapımına 1842 yılında başlanan ve çalışmaları 1853’e kadar devam eden Dolmabahçe Sarayı, Abdülmecit
+                döneminde ikamet ve resmi işlerinin yapıldığı yer olarak kullanılmaktaydı. Mustafa Kemal Atatürk
+                döneminde Cumhurbaşkanlığı Konutu olarak da kullanılan saray, 10 Kasım 1938’de Atatürk’ün vefat ettiği
+                yer olması nedeniyle de Cumhuriyet tarihi için büyük önem taşımaktadır.
+            </p>
+
+            <p><ul>
+                <li> Daha fazla bilgi için <a
+                    href=" https://www.millisaraylar.gov.tr/saraylar/dolmabahce-sarayi">https://www.millisaraylar.gov.tr/saraylar/dolmabahce-sarayi</a>
+    
+    </li>
+                <li>Dolmabahçe Sarayını 360 derece görmek için <a href="https://www.360tr.com/dolmabahce-sarayi-hazine-kapisi-2-panorama-sanal-tur_2418ad0cd3_tr.html">Tıklayınız</a></li>
+            </ul>
+            </p>
+
+            <br>
+            <br>
+
+
+            <h4>BÜYÜKADA <a href="https://www.buyukada.org/buyukada-rehberi-turkce/">
+                <img src="resimler/buyukada.jpg" alt="buyuk ada" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+
+                Adaya ilk yapı, miladi 6. yüzyılda inşa edilmiştir. En yüksek tepesinde Aya Yorgi Kilisesi ve Manastırı
+                bulunmaktadır. Bazıları günümüze kadar uzanan birçok kilise ve manastırın kalıntıları da bulunmaktadır.
+                Adalar’da otomobil yasağının olması gürültüden uzak ve havasının temiz olarak kalmasını sağlamaktadır.
+                Büyükada’da bulunan 4 camiden mimari olarak en dikkat çekeni II. Abdülhamid tarafından yaptırılan
+                Hamidiye Camii’dir. Bu cami, mimari açıdan Batı etkisinde inşa edilmiş olup, Ada Camii sokağında
+                bulunmaktadır.
+
+            </p>
+
+        </p>
+        <p><ul>
+            <li> Daha fazla bilgi için <a href=" https://www.buyukada.org/buyukada-rehberi-turkce/">
+                https://www.buyukada.org/buyukada-rehberi-turkce/</a>
+</li>
+            <li>Büyükada'yı 360 derece görmek için <a href="https://mobesekamerasi.com/buyukada-cankaya-caddesi-360-derece-izle/">Tıklayınız</a></li>
+        </ul>
+        </p>
+        <br>
+
+          
+            <br>
+
+
+            <h4>KIZ KULESİ <a href="https://kizkulesi.gov.tr/">
+                <img src="resimler/kız.jpg" alt="kız kulesi" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <br>
+
+            <h5>İlk efsane: Kralın Kızı</h5>
+            <p>
+                Kuleyle ilgili anlatılan efsanelerden en bilineni; kral ve kızının hikayesidir. Bir falcı tarafından
+                kızının yılan sokması nedeniyle öleceği hakkında uyarılan kral, kızını koruyabilmek adına Salacak
+                açıklarındaki kayalıklar üzerine kız kulesini inşa ettirir ve kızını bu kuleye yerleştirir.
+                Kral kızına belli vakitlerde sepet içerisinde çeşitli yiyecekler gönderir ve bir gün meyve sepetinin
+                içine gizlenen yılan kralın kızını zehirleyerek ölmesine neden olur.
+            </p>
+            <br>
+
+            <h5>İkinci efane: Kız Kulesi İle Galata Kulesinin Aşkı</h5>
+
+            <p>
+                Kız Kulesi Boğazda yalnız, naif ama büyüleyiciliğiyle İstanbul’un tam kalbinde yer alan bir inci tanesi
+                kadar zarif. Galata Kulesi ise, İstanbul’u tam tepeden izleyen heybetli bir yapı.
+                Kız Kulesi yalnız biçimde boğazda süzülürken, Galata Kulesi çıkar karşısına, heybetli ve büyüleyici
+                duruşuyla. İki kule İstanbul’un huzurunda birbirine aşık olur, ama kavuşamaz. Çünkü İstanbul Boğazı
+                kavuşmaları için aralarında bir engeldir. İmkansız aşk karşısında günden güne eriyen Kız Kulesine Galata
+                Kulesi mektuplar, şiirler yazar.
+            </p>
+            <p>
+                Bir gün Ahmet Çelebi çıkıverir Galata Kulesi’nin tepesine. Amacı oradan Üsküdar’a uçmaktır. Çelebi,
+                Galata Kulesinin ısrarlarına dayanamaz ve yüzyıllardır biriktirdiği mektupları da yanına alıp uçmaya
+                karar verir. Ancak salacak sahiline yaklaşırken rüzgarın etkisiyle dağılır yine de dalgalar mektupları
+                Kız Kulesine ulaştırır. O vakit Kız Kulesi Galata Kulesinin ona ne kadar aşık olduğunu anlamıştır.
+                Aşklarının karşılıklı olduğunu anlar daha da güzelleşirler. Kavuşmaları imkansız olsa da yüzyıllardır
+                karşılıklı bakışarak yaşarlar aşklarını… Nesilden nesle aktarılan bu efsane aşk, İstanbul’un güzelliğine
+                büyüleyici hava getirmiş, şimdi ise hikayelerindeki kadar renkli fenerleriyle dile gelip, mors
+                alfabesiyle birbirlerine “seni seviyorum” diyebilmişlerdir.
+            </p>
+
+            <p><ul>
+                <li>
+                    Daha fazla bilgi için <a href="https://kizkulesi.gov.tr/">
+                        https://kizkulesi.gov.tr/</a></li>
+                <li> Kız Kulesini 360 derece görmek için <a href="https://www.360tr.com/istanbul-kiz-kulesi-uskudar-yonu-panorama-sanal-tur_0fa8a9bae9_tr.html">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+
+        
+            <br>
+
+
+            <h4>GALATA KULESİ<a href="https://galatakulesi.gov.tr/">
+                <img src="resimler/3.jpg" alt="galata kulesi" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+
+                Galata Kulesi İstanbul’un sembol yapıları arasında olup dünyanın en eski kulelerinden biridir. Stratejik
+                açıdan önemli bir bölgede ve İstanbul’a hakim bir manzarayı içine alan bir tepede, Marmara’dan
+                gelebilecek olası tehlikeleri gözlemleme ve gemilere yol gösterme amacı ile fener kulesi olarak 528
+                yılında Bizanslılar tarafından inşa edilmiştir.
+
+            </p>
+
+            <p><ul>
+                <li> Daha fazla bilgi için <a href="https://galatakulesi.gov.tr/">
+                    https://galatakulesi.gov.tr/</a></li>
+                <li>Galata Kulesini 360 derece görmek için <a href="https://www.youtube.com/watch?v=Fp0JglnBHOc">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+
+           
+            <br>
+
+
+            <h4>PİERRE LOTİ TEPESİ <a href="https://www.pierrelotitepesi.com/">
+                <img src="resimler/loti.jpg" alt="pierre loti" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+                Haliç'in o ünlü panaromasının seyredilebildiği en iyi bölge olan bu sırtlara çıkıldığında; ünlü Fransız
+                yazar Pierre Loti'nin adını taşıyan Kahve'ye ulaşılmaktadır. İstanbul'da uzun dönemler yaşayan ve gerçek
+                bir İstanbul aşığı olan Pierre Loti'nin asıl adı "Julien Viaud'dur". Tarihi Kahve, bahsi geçen eşsiz
+                manzaranın seyredilebildiği en ideal yerdir.
+            </p>
+            <p>
+                Türkiye'yi ikinci vatan olarak gören Pierre Loti'nin o dönemde, "Rabia Kadın Kahvesi" olarak bilinen bu
+                kahveye sık sık gelerek Haliç'e karşı "Aziyade" adlı romanını yazdığı söylenir. Bugün restore edilerek
+                orijinal "Türk mahallesi" halinin yaşatıldığı bölge, turistik tesis olarak hizmet veren mekanlardan
+                oluşmaktadır.
+            </p>
+
+            <p><ul>
+                <li> Daha fazla bilgi için <a href="https://www.pierrelotitepesi.com/">
+                    https://www.pierrelotitepesi.com/</a></li>
+                <li>Pierre Loti Tepesini 360 derece görmek için <a href="https://www.360cities.net/image/pierre-lotti">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+            <br>
+
+            <h4>MİNİATÜRK <a href="https://www.miniaturk.com.tr/">
+                <img src="resimler/miniaturk.jpg" alt="miniaturk" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+                Miniatürk ya da Minyatür Türkiye Park, Türkiye'deki çeşitli yapıtların maketlerinin sergilendiği,
+                Beyoğlu, İstanbul'daki 60.000 metrekarelik alanda kurulu olan dünyanın en geniş alana kurulu minyatür
+                parkıdır. Haliç kıyısında bulunan eski bir park alanında konumlanmıştır.
+            </p>
+            <p>
+
+                Miniatürk, "Büyük Ülkenin Küçük Bir Modeli" sloganıyla yola çıkmış; içerdiği eserler, sunduğu
+                hizmetlerle turistik bir gezinti parkı, minyatür parkı olmuştur.
+            </p>
+
+            <p><ul>
+                <li>Daha fazla bilgi için <a href="https://www.miniaturk.com.tr/">
+                    https://www.miniaturk.com.tr/</a></li>
+                <li>Miniaturk'ü 360 derece görmek için <a href="https://mekan360.com/sanaltur_miniaturk_1699.html">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+
+            <br>
+
+            <h4>15 TEMMUZ ŞEHİTLER KÖPRÜSÜ <a href="https://www.uskudar.bel.tr/tr/main/pages/15-temmuz-sehitler-koprusu/36">
+                <img src="resimler/4.jpg" alt="15 temmuz koprusu" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+                15 Temmuz Şehitler Köprüsü, eski adıyla Boğaziçi Köprüsü ya da boğaza inşa edilen ilk köprü olmasına
+                atıfla halk arasında Birinci Köprü; Karadeniz ile Marmara Denizini birbirine bağlayan İstanbul Boğazı
+                üzerinde yer alan üç asma köprüden biri ve ilkidir. Köprünün ayakları Avrupa Yakası'nda Ortaköy, Anadolu
+                Yakası'nda Beylerbeyi semtlerindedir.
+            </p>
+            <p>
+                Yapımı tamamlandığında dünyanın en uzun dördüncü asma köprüsüyken, 2012 yılı itibarıyla
+                yirmi birinci sırada bulunmaktadır.
+            </p>
+            <p>
+                26 Temmuz 2016'da köprünün resmî adı, 2016 Türkiye askerî darbe girişimi sırasında köprüde hayatını
+                kaybeden vatandaşların anısına 15 Temmuz Şehitler Köprüsü olarak değiştirilmiştir.[3][4]
+            </p>
+
+            <p><ul>
+                <li> Daha fazla bilgi için <a href="https://www.uskudar.bel.tr/tr/main/pages/15-temmuz-sehitler-koprusu/36">
+                    https://www.uskudar.bel.tr/tr/main/pages/15-temmuz-sehitler-koprusu/36</a>
+    </li>
+                <li>15 Temmuz Şehitler Köprüsünü 360 derece görmek için <a href="https://www.youtube.com/watch?v=PAHJTOP-VQU">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+
+            <br>
+
+
+
+            <h4>ORTAKÖY CAMİİ <a href="https://www.sanatinyolculugu.com/ortakoy-camii/">
+                <img src="resimler/1.jpg" alt="ortakoy cami" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+                Büyük Mecidiye Camii ya da halk arasında bilinen adı ile Ortaköy Camii, İstanbul Boğaziçi’nde Beşiktaş
+                ilçesinin, Ortaköy semtinde sahilde bulunan Neo Barok tarzında bir camiidir.
+            </p>
+            <p>
+                Cami, Sultan Abdülmecid tarafından Ermeni asıllı Mimar Nigoğos Balyan’a 1853 yılında yaptırılmıştır.
+                Oldukça zarif bir yapı olan cami Barok üslubundadır. Boğaziçi’nde eşsiz bir konuma yerleştirilmiştir.
+                Bütün selatin camilerinde olduğu gibi harim ve hünkar bölümü olmak üzere iki kısımdan oluşur. Geniş ve
+                yüksek pencereler Boğaz’ın değişken ışıklarını caminin içine taşıyacak biçimde düzenlenmiştir.
+
+
+            </p>
+
+            <p><ul>
+                <li> Daha fazla bilgi için <a href="https://www.sanatinyolculugu.com/ortakoy-camii/">
+                    https://www.sanatinyolculugu.com/ortakoy-camii/</a></li>
+                <li>Ortaköy Camii'yi 360 derece görmek için <a href="https://www.360cities.net/image/ortakoy-mosque">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+
+          
+            <br>
+
+
+
+            <h4>TAKSİM MEYDANI <a href="https://istanbuluseyret.ibb.gov.tr/taksim/">
+                <img src="resimler/taksim.jpg" alt="taksim" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+
+                Taksim Meydanı, İstanbul'un Beyoğlu ilçesinde yer alan ve İstanbul kentinin en ünlü noktalarından biri
+                olan meydan. Çevresindeki lokanta, mağaza, otel, eğlence ve kültür yerleriyle İstanbul'un en büyük
+                turistik çekim merkezinden biridir. Cumhuriyet Döneminde bir meydan haline gelmiş olan Taksim Meydanı,
+                pek çok siyasi ve toplumsal olaya da ev sahipliği yapmıştır. Meydandaki trafiği kısmen yer altına
+                indiren Taksim Yayalaştırma Projesi, 2013 yılında kısmen tamamlanmıştır.
+            </p>
+            <p>
+                İstanbul Büyükşehir Belediyesi tarafından 2020 Şubat ayında başlatılan uluslararası tasarım
+                yarışmasında, İstanbul halkının oylarıyla birinci olacak projeye göre Taksim Meydanı'nın yeniden
+                düzenlenmesine karar verilmiştir.
+
+
+            </p>
+
+            <p><ul>
+                <li>   Daha fazla bilgi için <a href="https://istanbuluseyret.ibb.gov.tr/taksim/">
+                    https://istanbuluseyret.ibb.gov.tr/taksim/</a>
+    </li>
+                <li>Taksim Meydanı 360 derece görmek için <a href="https://www.360cities.net/image/taksim-square-istanbul">Tıklayınız</a></li>
+            </ul>
+            </p>
+
+            <br>
+            <br>
+
+
+            <h4>EMİNÖNÜ <a href="https://istanbuluseyret.ibb.gov.tr/eminonu-3/">
+                <img src="resimler/eminonu.jpg" alt="eminonu" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+
+
+                Eminönü, İstanbul'un bir semtidir. İstanbul'un Tarihî yarımada olarak bilinen kısımda, Haliç'in
+                batısında yer alır. 7 Mart 2008 tarihine kadar ilçe belediyesi olan Eminönü bu tarihte lağvedilerek
+                kanunla Fatih ilçesine bağlanmıştır.[1]
+            </p>
+            <p>
+                Bütünüyle İstanbul kentinin tarihi çekirdeği olan sur içinde yer alır ve merkezi alanın en canlı
+                bölgelerinden birini oluşturur. Osmanlı döneminde Deniz Gümrüğü ve Gümrük Eminliğinin burada bulunması
+                sebebiyle Eminönü adını almış, Fatih ilçesiyle birlikte cumhuriyetin ilk yıllarında İstanbul'un merkezi
+                ilçesi olmuştur. İlçe olduğu dönemde yüzölçümü bakımından Adalar'ın ardından İstanbul'un en küçük
+                ilçesiydi.
+
+
+            </p>
+
+            <p><ul>
+                <li>Daha fazla bilgi için <a href="https://istanbuluseyret.ibb.gov.tr/eminonu-3/">
+                    https://istanbuluseyret.ibb.gov.tr/eminonu-3/</a>
+    </li>
+                <li>Eminönü'nü 360 derece görmek için <a href="https://www.360cities.net/image/eminonu-istanbul">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+
+           
+            <br>
+
+
+
+            <h4>GÜLHANE PARKI <a href="http://www.istanbul.gov.tr/istanbulun-koru-ve-parklari-gulhane-parki">
+                <img src="resimler/gulhane.jpg" alt="gulhane parki" style="width:46px;height:46px;">
+                </a>
+            </h4>
+            <p>
+
+                Gülhane Parkı, İstanbul'un Fatih ilçesinin Eminönü semtinde yer alan tarihî bir parktır. Alay Köşkü,
+                Topkapı Sarayı ve Sarayburnu arasında yer alır.
+
+            </p>
+            <p>
+                Gülhane Parkı, Osmanlı İmparatorluğu döneminde Topkapı Sarayı'nın dış bahçesiydi ve içinde bir koru ve
+                gül bahçelerini barındırırdı. Türk tarihinde demokratikleşmenin ilk somut adımı olan Tanzimat Fermanı, 3
+                Kasım 1839'da Abdülmecit döneminde Hariciye Nazırı Mustafa Reşit Paşa tarafından Gülhane Parkı'nda
+                okunmuştur ve bu nedenle Gülhane Hatt-ı Hümayunu da denir.
+            </p>
+            <p>
+
+                İstanbul şehremini operatör Cemil Paşa (Topuzlu) zamanında düzenlenerek 1912 yılında park haline
+                getirildi ve halka açıldı. Toplam alanı 163 dönüm kadardır. Parkın girişinde sağ tarafta İstanbul
+                şehremini ve belediye başkanlarının büstleri vardır. Parkın ortasından iki yanı ağaçlı yol geçer. Bu
+                yolun sağında ve solunda dinlenme yerleri, çocuk bahçesi bulunmaktadır. Boğaza doğru kıvrılarak inen
+                yokuşun hemen sağında bir Aşık Veysel heykeli, yokuşun sonuna doğru biraz üst kısımda ise Romalılardan
+                kalma Gotlar Sütunu vardır.
+
+            </p>
+
+            <p><ul>
+                <li> Daha fazla bilgi için <a href="http://www.istanbul.gov.tr/istanbulun-koru-ve-parklari-gulhane-parki">
+                    http://www.istanbul.gov.tr/istanbulun-koru-ve-parklari-gulhane-parki</a>
+    </li>
+                <li>Gülhane Parkını 360 derece görmek için <a href="https://www.360cities.net/image/turkey-istanbul-gulhane-park">Tıklayınız</a></li>
+            </ul>
+            </p>
+            <br>
+
+          
+            <br>
+
+        </div>
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+            </script>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+            $('#navbar-placeholder').load('navbar.html');
+        </script>
+</body>
+
+</html>

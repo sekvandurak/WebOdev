@@ -27,19 +27,17 @@
   margin-bottom: 10px;
 }
 
-.movie-card .overview,
-.movie-card .overview-truncated,
-.movie-card .overview-full {
+.movie-card .overview {
   white-space: normal; /* Ensure text wraps */
   word-wrap: break-word; /* Break long words if necessary */
   margin-top: 10px;
 }
 
-.read-more,
-.read-less {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
+.release-date {
+  /* Remove background color and other styles */
+  padding: 5px;
+  border-radius: 3px;
+  display: inline-block;
 }
 
 /* Media Queries for Responsiveness */
