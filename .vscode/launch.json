@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost/WebOdev/takim.html",
+            "url": "http://localhost/WebOdev/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
