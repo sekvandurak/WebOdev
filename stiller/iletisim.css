@@ -1,0 +1,35 @@
+body {
+  background-color: #f8f9fa; /* Light background for better contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+h2 {
+  color: #007bff; /* Bootstrap blue for headings */
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.btn-success {
+  background-color: #28a745; /* Bootstrap green */
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.form-check {
+  margin-bottom: 10px; /* Add space between radio/checkbox options */
+}

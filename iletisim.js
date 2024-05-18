@@ -1,32 +1,25 @@
-
-
-
-    function checkForm() {
-        var nameInput = document.getElementById('pwd');
-        var emailInput = document.getElementById('email');
-      
-        if (nameInput.value === '' || emailInput.value === '') {
-          alert('Lütfen tüm alanları doldurun!');
-          return;
-        }
-      
+new Vue({
+  el: '#app',
+  data: {
+    email: '',
+    password: ''
+  },
+  methods: {
+    checkForm() {
+      if (!this.email || !this.password) {
+        alert('Lütfen tüm alanları doldurun!');
+      } else {
+        // Form submission logic here
         alert('Form geçerlidir.');
       }
-      
-      function checkEmail() {
-        var emailInput = document.getElementById('email');
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
-        if (!emailPattern.test(emailInput.value)) {
-            alert('Geçerli bir e-posta adresi girin!');
-            return;
-        }
-    
+    },
+    checkEmail() {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(this.email)) {
+        alert('Geçerli bir e-posta adresi girin!');
+      } else {
         alert('E-posta geçerlidir.');
+      }
     }
- 
-
-
-
-
-  
+  }
+});

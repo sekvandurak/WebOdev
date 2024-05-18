@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Kayıt Bilgileri</title>
+  <link rel = "stylesheet"  href = "stiller/iletisimPHP.css" />
+</head>
 <body>
+  <div class="container">
+    <?php
+      $a = "Bilgiler alındı...";
+      echo "<h2>Hoşgeldiniz, $a</h2>";
 
-<?php
+      $email = $_GET["email"];
+      $pwd = $_GET["pwd"];
+      $sehir = $_GET["sehir"];
+      $takim = $_GET["takim"];
+      $cinsiyet = $_GET["cinsiyet"];
+      $renk = $_GET["renk"];
 
+      echo "<p><strong>Öğrenci Numaranız:</strong> $email</p>";
+      echo "<p><strong>Şifreniz:</strong> $pwd</p>";
+      echo "<p><strong>Şehriniz:</strong> $sehir</p>";
+      echo "<p><strong>Tuttuğunuz Takım:</strong> $takim</p>";
+      echo "<p><strong>Cinsiyetiniz:</strong> $cinsiyet</p>";
+      echo "<p><strong>En sevdiğiniz renk:</strong> $renk</p>";
 
-
-$a="Bilgiler alındı...";
-echo "bHoşgeldiniz , ".$a."<br><br>";
-
-$email =$_GET["email"];
-echo "Öğrenci Numaranız: ".$_GET["email"]."<br><br>";
-
-$pwd =$_GET["pwd"];
-echo "Şifreniz: ".$_GET["pwd"]."<br><br>";
-
-$sehir =$_GET["sehir"];
-echo "Şehriniz: ".$_GET["sehir"]."<br><br>";
-
-$exampleRadios2 =$_GET["takim"];
-echo "Tuttuğunuz Takım: ".$_GET["takim"]."<br><br>";
-
-
-$exampleRadios1 =$_GET["cinsiyet"];
-echo "Cinsiyetiniz: ".$_GET["cinsiyet"]."<br><br>";
-
-
-$exampleRadios2 =$_GET["takim"];
-echo "Tuttuğunuz Takım: ".$_GET["takim"]."<br><br>";
-
-
-$renk =$_GET["renk"];
-echo "En sevdiğiniz renk: ".$_GET["renk"]."<br><br>";
-
-
-echo "Giriş Başarılı ".$email;
-
-
-
-?>
-
-
-
+      echo "<h3>Giriş Başarılı $email</h3>";
+    ?>
+  </div>
 </body>
 </html>

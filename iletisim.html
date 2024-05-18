@@ -1,166 +1,118 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayıt Formu</title>
 
-
-        <script src="iletisim.js"></script>
-
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="stiller/iletisim.css">
+  <script src="iletisim.js"></script>
 </head>
 
 <body>
-    <div id="navbar-placeholder"></div>    <br>    <br>
+  <div id="navbar-placeholder"></div>
 
-    <div class="container">
-        <center>
-            <h2>KAYIT FORMU</h2>
-        </center>
-        <form action="iletisim.php">
-            <div class="form-group">
-                <label for="email">Öğrenci Numarası:</label>
-                <input type="email" class="form-control" id="email" required placeholder="Enter email" name="email">
+  <div class="container">
+    <center><h2>KAYIT FORMU</h2></center>
+    <form action="iletisim.php">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">Mail Adresi:</label>
+                <input type="text" class="form-control" id="email" required placeholder="Mailinizi girin" name="email">
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-6">
                 <label for="pwd">Şifre:</label>
-                <input type="password" class="form-control" id="pwd" required placeholder="Enter password" name="pwd">
+                <input type="password" class="form-control" id="pwd" required placeholder="Şifrenizi girin" name="pwd">
             </div>
+        </div>
+      <div class="form-row"> 
+        <div class="form-group col-md-6">
+          <label for="sehir">Şehrinizi seçiniz</label>
+          <select class="form-control" id="sehir" name="sehir">
+            <option>İzmir</option>
+            <option>Sakarya</option>
+            <option>Kocaeli</option>
+            <option>Ankara</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="renk">En sevdiğiniz rengi seçiniz</label>
+          <select class="form-control" id="renk" name="renk">
+            <option>Kırmızı</option>
+            <option>Sarı</option>
+            <option>Mavi</option>
+            <option>Yeşil</option>
+            <option>Siyah</option>
+          </select>
+        </div>
+      </div>
+        
+      <div class="form-group">
+          <label for="takim">Tuttuğunuz takımı seçiniz</label>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="takim" id="takim1" value="Galatasaray" checked>
+              <label class="form-check-label" for="takim1">Galatasaray</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="takim" id="takim2" value="Fenerbahçe">
+              <label class="form-check-label" for="takim2">Fenerbahçe</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="takim" id="takim3" value="Beşiktaş">
+              <label class="form-check-label" for="takim3">Beşiktaş</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="takim" id="takim4" value="Trabzonspor">
+              <label class="form-check-label" for="takim4">Trabzonspor</label>
+          </div>
+      </div>
 
 
-          
 
-            <div class="form-group">
-                <label for="sehir">Şehrinizi seçiniz</label>
-                <select class="form-control" id="sehir" placeholder="Enter option" name="sehir">
-                    <option>İzmir</option>
-                    <option>Sakarya</option>
-                    <option>Kocaeli</option>
-                    <option>Ankara</option>
-                    <option>İzmir</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="takim">Tuttuğunuz takımı seçiniz</label>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="takim" id="takim"
-                            value=" Galatasaray" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                            Galatasaray
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="takim" id="takim"
-                            value=" Fenerbahçe" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                            Fenerbahçe
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="takim" id="takim"
-                            value=" Beşiktaş" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                            Beşiktaş
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="takim" id="takim" 
-                            value=" Trabzonspor" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                            Trabzonspor
-                        </label>
-                    </div>
-
-                </div>
+      <div class="form-group">
+        <label for="cinsiyet">Cinsiyet seçiniz</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet1" value="Kadın" checked>
+            <label class="form-check-label" for="cinsiyet1">Kadın</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet2" value="Erkek">
+            <label class="form-check-label" for="cinsiyet2">Erkek</label>
+        </div>
+      </div>
+        
+      <button type="submit" class="btn btn-success">Giriş Yap</button>
+      <button type="reset" class="btn btn-secondary">Temizle</button>
 
 
-            <div class="form-group">
-                <label for="sehir">En sevdiğiniz rengi seçiniz</label>
-                <select class="form-control" id="renk" required placeholder="Enter option" name="renk">
-                    <option>Kırmızı</option>
-                    <option>Sarı</option>
-                    <option>Mavi</option>
-                    <option>Yeşil</option>
-                    <option>Siyah</option>
-                </select>
-            </div>
+      <br>
+      <br>
+
+      <div class="container">
+
+        <button type="button" class="btn btn-success" onclick="checkForm()">Formu Kontrol Et</button>
+        <button type="button" class="btn btn-success" onclick="checkEmail()">E-postayı Kontrol Et</button>
+      </div>
+
+    </form>
+  </div>
+
+  <div id="footer-placeholder"></div>
 
 
-            <div class="form-group">
-                <label for="cinsiyet">Cinsiyet seçiniz</label>
-    
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet"
-                            value="Kadın" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                            Kadın
-                        </label>
-                    </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet" required
-                            value="Erkek" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                            Erkek
-                        </label>
-                    </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/jquery.min.js"></script>
 
-                </div>
-                  
-                    <button type="submit" class="btn btn-success">Giriş Yap</button>
-                    <button type="reset" class="btn btn-secondary">Temizle</button>
-
-                    <br>
-                    <br>
-
-                    <div class="container">
-
-                    <button type="button" class="btn btn-success" onclick="checkForm()">Formu Kontrol Et</button>
-                    <button type="button" class="btn btn-success" onclick="checkEmail()">E-postayı Kontrol Et</button>
-                </div>
-           
-        </form>
-    </div>
-    <div id="footer-placeholder"></div>
-
-    
-<br>
-<br>
-<br>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
-
-
-            <!--JQuery kullanimi-->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <script type="text/javascript">
-        $('#navbar-placeholder').load('navbar.html');
-    </script>
-    <script type="text/javascript">
+  <script type="text/javascript">
+      $('#navbar-placeholder').load('navbar.html');
       $('#footer-placeholder').load('footer.html');
-    </script>
+  </script>
 
 </body>
-
 </html>
