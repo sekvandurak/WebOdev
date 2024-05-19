@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open navbar.html",
-            "file": "localhost/WebOdev/index.html"
+            "name": "Open iletisim.html",
+            "file": "localhost/WebOdev/iletisim.html"
         }
     ]
 }
