@@ -7,9 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost/WebOdev/index.html",
-            "webRoot": "${workspaceFolder}"
+            "name": "Open navbar.html",
+            "file": "localhost/WebOdev/index.html"
         }
     ]
 }
