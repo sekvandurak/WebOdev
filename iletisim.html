@@ -1,119 +1,146 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kayıt Formu</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Kayıt Formu</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="stiller/iletisim.css">
-  <script src="iletisim.js"></script>
-  <title>Sekvan Durak Website</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+ <link rel="stylesheet" href="stiller/iletisim.css">
+ <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+ <title>Sekvan Durak Website</title>
 </head>
 
 <body>
-  <div id="navbar-placeholder"></div>
+ <div id="navbar-placeholder"></div>
 
-  <div class="container">
-    <center><h2>KAYIT FORMU</h2></center>
-    <form action="iletisim.php">
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="email">Mail Adresi:</label>
-                <input type="text" class="form-control" id="email" required placeholder="Mailinizi girin" name="email">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="pwd">Şifre:</label>
-                <input type="password" class="form-control" id="pwd" required placeholder="Şifrenizi girin" name="pwd">
-            </div>
-        </div>
-      <div class="form-row"> 
-        <div class="form-group col-md-6">
-          <label for="sehir">Şehrinizi seçiniz</label>
-          <select class="form-control" id="sehir" name="sehir">
-            <option>İzmir</option>
-            <option>Sakarya</option>
-            <option>Kocaeli</option>
-            <option>Ankara</option>
-          </select>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="renk">En sevdiğiniz rengi seçiniz</label>
-          <select class="form-control" id="renk" name="renk">
-            <option>Kırmızı</option>
-            <option>Sarı</option>
-            <option>Mavi</option>
-            <option>Yeşil</option>
-            <option>Siyah</option>
-          </select>
-        </div>
+ <div class="container" id="app">
+  <center><h2>KAYIT FORMU</h2></center>
+  <form action="iletisim.php">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Mail Adresi:</label>
+        <input type="text" class="form-control" id="email" v-model="email" required placeholder="Mailinizi girin" name="email">
       </div>
-        
-      <div class="form-group">
-          <label for="takim">Tuttuğunuz takımı seçiniz</label>
-          <div class="form-check">
-              <input class="form-check-input" type="radio" name="takim" id="takim1" value="Galatasaray" checked>
-              <label class="form-check-label" for="takim1">Galatasaray</label>
-          </div>
-          <div class="form-check">
-              <input class="form-check-input" type="radio" name="takim" id="takim2" value="Fenerbahçe">
-              <label class="form-check-label" for="takim2">Fenerbahçe</label>
-          </div>
-          <div class="form-check">
-              <input class="form-check-input" type="radio" name="takim" id="takim3" value="Beşiktaş">
-              <label class="form-check-label" for="takim3">Beşiktaş</label>
-          </div>
-          <div class="form-check">
-              <input class="form-check-input" type="radio" name="takim" id="takim4" value="Trabzonspor">
-              <label class="form-check-label" for="takim4">Trabzonspor</label>
-          </div>
+      <div class="form-group col-md-6">
+        <label for="pwd">Şifre:</label>
+        <input type="password" class="form-control" id="pwd" v-model="password" required placeholder="Şifrenizi girin" name="pwd">
       </div>
+    </div>
+   <div class="form-row"> 
+    <div class="form-group col-md-6">
+     <label for="sehir">Şehrinizi seçiniz</label>
+     <select class="form-control" id="sehir" name="sehir">
+      <option>İzmir</option>
+      <option>Sakarya</option>
+      <option>Kocaeli</option>
+      <option>Ankara</option>
+     </select>
+    </div>
+    <div class="form-group col-md-6">
+     <label for="renk">En sevdiğiniz rengi seçiniz</label>
+     <select class="form-control" id="renk" name="renk">
+      <option>Kırmızı</option>
+      <option>Sarı</option>
+      <option>Mavi</option>
+      <option>Yeşil</option>
+      <option>Siyah</option>
+     </select>
+    </div>
+   </div>
+    
+   <div class="form-group">
+     <label for="takim">Tuttuğunuz takımı seçiniz</label>
+     <div class="form-check">
+       <input class="form-check-input" type="radio" name="takim" id="takim1" value="Galatasaray" checked>
+       <label class="form-check-label" for="takim1">Galatasaray</label>
+     </div>
+     <div class="form-check">
+       <input class="form-check-input" type="radio" name="takim" id="takim2" value="Fenerbahçe">
+       <label class="form-check-label" for="takim2">Fenerbahçe</label>
+     </div>
+     <div class="form-check">
+       <input class="form-check-input" type="radio" name="takim" id="takim3" value="Beşiktaş">
+       <label class="form-check-label" for="takim3">Beşiktaş</label>
+     </div>
+     <div class="form-check">
+       <input class="form-check-input" type="radio" name="takim" id="takim4" value="Trabzonspor">
+       <label class="form-check-label" for="takim4">Trabzonspor</label>
+     </div>
+   </div>
 
 
 
-      <div class="form-group">
-        <label for="cinsiyet">Cinsiyet seçiniz</label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet1" value="Kadın" checked>
-            <label class="form-check-label" for="cinsiyet1">Kadın</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet2" value="Erkek">
-            <label class="form-check-label" for="cinsiyet2">Erkek</label>
-        </div>
-      </div>
-        
-      <button type="submit" class="btn btn-success">Giriş Yap</button>
-      <button type="reset" class="btn btn-secondary">Temizle</button>
+   <div class="form-group">
+    <label for="cinsiyet">Cinsiyet seçiniz</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet1" value="Kadın" checked>
+      <label class="form-check-label" for="cinsiyet1">Kadın</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="cinsiyet" id="cinsiyet2" value="Erkek">
+      <label class="form-check-label" for="cinsiyet2">Erkek</label>
+    </div>
+   </div>
+    
+   <button type="submit" class="btn btn-success">Giriş Yap</button>
+   <button type="reset" class="btn btn-secondary">Temizle</button>
 
 
-      <br>
-      <br>
+   <br>
+   <br>
 
-      <div class="container">
+   <div class="container">
 
-        <button type="button" class="btn btn-success" onclick="checkForm()">Formu Kontrol Et</button>
-        <button type="button" class="btn btn-success" onclick="checkEmail()">E-postayı Kontrol Et</button>
-      </div>
+    <button type="button" class="btn btn-success" @click="checkForm">Formu Kontrol Et</button>
+    <button type="button" class="btn btn-success" @click="checkEmail">E-postayı Kontrol Et</button>
+   </div>
 
-    </form>
-  </div>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/jquery.min.js"></script>
+  </form>
+ </div>
 
 
-  <div id="footer-placeholder"></div>
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="//code.jquery.com/jquery.min.js"></script>
+
+
+ <div id="footer-placeholder"></div>
 <script type="text/javascript">
-  $('#navbar-placeholder').load('navbar.html');
-  $('#footer-placeholder').load('footer.html');
+ $('#navbar-placeholder').load('navbar.html');
+ $('#footer-placeholder').load('footer.html');
+</script>
+
+<script>
+new Vue({
+ el: '#app',
+ data: {
+  email: '',
+  password: ''
+ },
+ methods: {
+  checkForm() {
+   if (!this.email || !this.password) {
+    alert('Lütfen tüm alanları doldurun!');
+   } else {
+    // Form submission logic here
+    alert('Form geçerlidir.');
+   }
+  },
+  checkEmail() {
+   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   if (!emailPattern.test(this.email)) {
+    alert('Geçerli bir e-posta adresi girin!');
+   } else {
+    alert('E-posta geçerlidir.');
+   }
+  }
+ }
+});
 </script>
 </body>
-
 </html>

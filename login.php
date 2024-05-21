@@ -12,10 +12,10 @@
         $pwd = $_POST['pwd'];
 
         if ($email == "sekvan.durak@ogr.sakarya.edu.tr" && $pwd == "123456") {
-          echo "<h2>Başarıyla giriş yapıldı!</h2>";
-          echo "<p>Hoşgeldin, $email</p>";
+          header("Location: index.html"); // Redirect to the index page
+          exit;
         } else {
-          header("Location: login.html?error=1");
+          header("Location: login.html?error=1"); // Redirect back to login with error
           exit;
         }
       }
